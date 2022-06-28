@@ -1,0 +1,1115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('Pictures/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main {
+    min-height: calc(100vh - 140px);
+}
+
+#close-popup-1 {
+    position: sticky;
+    float:right;
+    margin-right: -3px;
+    margin-top: -14px;
+    background-color: rgba(5, 34, 36, 0);
+}
+
+.close-logo {
+    width: 35px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+}
+
+.login-Text {
+    font-size: 20px;
+    color: white;
+    margin: 7px 0 7px 0;
+    text-align: center;
+}
+
+.erase-Text {
+    font-size: 18px;
+    color: white;
+    margin: 7px 0 7px 0;
+    text-align: center;
+}
+
+.rate-Text {
+    font-size: 18px;
+    color: rgb(146, 18, 18);
+    margin: 7px 0 7px 0;
+    text-align: center;
+}
+
+.logout-Text {
+    font-size: 19px;
+    color: white;
+    text-align: right;
+    margin: 5px 0 5px 0;
+}
+
+.finishRegister-Text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #45e8d8;
+    margin: 20px 0 20px 0;
+}
+
+.registerChaza-Text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: #0E625A;
+    margin: 20px 0 20px 0;
+}
+
+.username-Text {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.footer-Text {
+    float: left;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.Chazam-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
+}
+
+.Google-logo {
+    float: left;
+    width: 42px;
+    margin-right: 8px;
+}
+
+.Milhojas-logo {
+    width: 130px;
+    float: left;
+}
+
+.login-Box {
+    text-align: center;
+    background-color: rgba(5, 22, 30, 0.6);
+    padding: 40px 10px 60px 10px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    width: 420px;
+    font-size: 22px;
+    color: white;
+}
+
+.login-Box2 {
+    text-align: center;
+    background-color: rgba(5, 22, 30, 0.6);
+    padding: 30px 10px 50px 10px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    width: 380px;
+    font-size: 22px;
+    color: white;
+}
+
+.logout-Page-Box {
+    text-align: center;
+    background-color: rgba(13, 117, 120, 0.732);
+    padding: 45px 30px 50px 30px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    width: 420px;
+    font-size: 22px;
+    color: white;
+}
+
+.signup-Box {
+    text-align: left;
+    background-color: rgba(5, 22, 30, 0.6);
+    padding: 30px 70px 30px 70px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 250px;
+    font-size: 20px;
+    color: white;
+}
+
+.reseñaForm{
+    display:block;
+    margin-bottom:0px;
+}
+
+.signup-Box4 {
+    text-align: left;
+    background-color: rgba(5, 22, 30, 1);
+    padding: 40px 25px 25px 25px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    width: 310px;
+    font-size: 20px;
+    color: white;
+}
+
+.registerChaza-Box {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.705);
+    padding: 30px 70px 30px 70px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 700px;
+    font-size: 20px;
+    color: white;
+}
+
+.NameText-Profile {
+    font-size: 38px;
+    margin-bottom: 0;
+    margin-top:60px;
+}
+
+.LocationText-Profile {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 22px;
+    color: rgb(255, 187, 187);
+    font-weight: 600;
+}
+
+.profileChaza-Box {
+    text-align: left;
+    background-color: rgba(214, 74, 74, 0.887);
+    padding: 30px 70px 30px 70px;
+    border-radius: 10px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 700px;
+    font-size: 20px;
+    color: white;
+}
+
+.commentsChaza-Box {
+    text-align: left;
+    background-color: rgba(89, 10, 10, 0.8);
+    padding: 30px 70px 30px 70px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 700px;
+    font-size: 20px;
+    color: white;
+}
+
+.signup-Box2 {
+    text-align: left;
+    background-color: rgba(5, 22, 30, 0.6);
+    padding: 10px 70px 10px 40px;
+    border-radius: 10px;
+    margin-left: -10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 170px;
+    font-size: 20px;
+    color: white;
+}
+
+.filtro-Box2 {
+    text-align: left;
+    display: block;
+    float: left;
+    background-color: rgba(22, 126, 129, 0.6);
+    padding: 10px 40px 10px 40px;
+    border-radius: 15px;
+    width: 980px;
+    height:40px;
+    font-size: 20px;
+    color: white;
+}
+
+.containerForSearchField{
+    width:1160px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.searchField{
+    background-color: rgba(0,0,0,0);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    margin-top:3px;
+    width:975px;
+}
+
+.searchField::placeholder {
+    color: rgb(168, 216, 214);
+    font-weight: normal;
+}
+
+.searchField:focus{
+    outline: none;
+}
+
+.filtroButton {
+    border-radius: 15px;
+    background-color: rgba(22, 126, 129, 0.6);
+    border-style: none;
+    padding: 10px 10px 10px 10px;
+    width: 40px;
+    height: 40px;
+    margin: 0px 20px 20px 20px;
+}
+
+.filtro-Box3 {
+    text-align: left;
+    padding: 0px 15px 0px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    font-size: 20px;
+    color: white;
+    background-color: #12879c;
+}
+
+.cardsChaza-Box {
+    text-align: center;
+    display: block;
+    float: left;
+    position: relative;
+    justify-content: space-around;
+    background-color: rgba(248, 248, 248, 0.979);
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    margin-left: 5;
+    margin-right: 5;
+    margin-bottom: 10;
+    min-width: 180px;
+    height: 80px;
+    font-size: 20px;
+    color: white;
+}
+
+.cardChaza-title {
+    display: block;
+    text-align: center;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    padding-top: 5px;
+}
+
+.cardChaza-desc {
+    display: block;
+    position: absolute;
+    text-align: left;
+    background-color: rgba(248, 248, 248, 0.979);
+    top: 0;
+    border-top-right-radius: 4px;
+    opacity: 0;
+    width: 86%;
+    height: 75px;
+    width: 85%;
+    overflow-y: auto;
+    padding: 20px 10px 20px 0px;
+    transition: 0.8s ease;
+}
+
+.cardsChaza-Box:hover .cardChaza-desc {
+    opacity: 1;
+}
+
+.chazaTitle {
+    color: #7c2424;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 3px 0 0 0;
+}
+
+.chazaPuntuacion {
+    color: #d46868;
+    font-size: 18px;
+    margin: 0 0 0 0;
+}
+
+.chazaTitle2 {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 15px;
+    margin: 5px 0 2px 0;
+}
+
+.chazaCategoria {
+    color: #88E6DD;
+    font-size: 10px;
+    margin: 0 0 0 0;
+}
+
+.chazaUbicacion {
+    color: #12879c;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 0 0;
+}
+
+.chazaDescripcion {
+    color: #000000;
+    font-size: 16px;
+    margin: 5px 0 0 0;
+}
+
+.chazaComment {
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic;
+    margin: 3px 0 0 0;
+    font-size:22px;
+}
+
+.chazaRatingScore{
+    color: #f29c9c;
+    margin: 10px 0 0 0;
+    font-size:22px;
+}
+
+.signup-Box3 {
+    text-align: left;
+    padding: 10px 70px 10px 40px;
+    margin-left: -10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 600px;
+    height: 270px;
+    font-size: 20px;
+    color: white;
+}
+
+.googleLogin {
+    display: block;
+    border: none;
+    border-radius: 8px;
+    background-color: #17A597;
+    padding: 10px 25px 10px 25px;
+    width: 280px;
+    margin-top: -5px;
+    margin-bottom: 30px;
+    margin-left: 28px;
+    margin-right: 28px;
+    text-decoration: none;
+}
+
+.otherLogin {
+    text-align: left;
+    display: block;
+    border: none;
+    border-radius: 8px;
+    background-color: #167f99;
+    padding: 10px 35px 10px 35px;
+    width: 220px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 45px;
+    margin-right: 45px;
+    text-decoration: none;
+}
+
+.Ingresar-Text {
+    font-size: 30px;
+    color: white;
+}
+
+.startButton {
+    display: block;
+    border: none;
+    border-radius: 8px;
+    background-color: #17A597;
+    padding: 10px 25px 10px 25px;
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 90px;
+    margin-right: 90px;
+    text-decoration: none;
+}
+
+.eraseChazaButton {
+    display: block;
+    border-radius: 8px;
+    background-color: #c52f2f;
+    padding: 1px 5px 1px 5px;
+    width: 150px;
+    margin-top: -10px;
+    margin-left: 275px;
+    margin-right: 275px;
+}
+
+.ingresarButton {
+    display: block;
+    border: none;
+    border-radius: 8px;
+    background-color: #c65f5f;
+    padding: 4px 10px 4px 10px;
+    width: 180px;
+    margin-top: -10px;
+    margin-left: 105px;
+    margin-right: 105px;
+}
+
+.goToRegisterButton {
+    font-size: 18px;
+    display: block;
+    border-style: outset;
+    border-radius: 8px;
+    padding: 10px 10px 10px 10px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 135px;
+    margin-right: 135px;
+}
+
+.goToLoginButton {
+    font-size: 18px;
+    display: block;
+    border-style: outset;
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+    width: 250px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logout-Box {
+    background-color: #da3838;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 15px 10px 15px;
+    width: 185px;
+    text-align: right;
+    position: sticky;
+    margin-top: 5px;
+    margin-bottom: -95px;
+    float: right;
+    visibility: hidden;
+    z-index: 50;
+}
+
+.confirmChazaDeletion-Box {
+    background-color: rgb(4, 62, 88);
+    color: white;
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    padding: 10px 10px 10px 10px;
+    width: 185px;
+    margin-top: -95px;
+    margin-right: 62px;
+    position: sticky;
+    float: right;
+    visibility: hidden;
+}
+
+.rateChazaButton {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 5px 10px 5px 20px;
+    width: 245px;
+    top: 25px;
+    right: 25px;
+    position: absolute;
+}
+
+.goBackButton {
+    background-color: rgb(12, 139, 161);
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+    width: 140px;
+    margin-top: 0px;
+    margin-left: -40px;
+    margin-right: -100px;
+    position: sticky;
+    float: left;
+}
+
+.goBackButton2 {
+    background-color: rgb(12, 139, 161);
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+    width: 80px;
+    margin-top: -29px;
+    margin-left: -10px;
+    margin-right: -150px;
+    position: sticky;
+    float: left;
+}
+
+.goBackButton3 {
+    background-color: rgb(88, 20, 20);
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+    width: 80px;
+    margin-top: 0px;
+    margin-left: -40px;
+    margin-right: -100px;
+    position: sticky;
+    float: left;
+}
+
+.goBack-Text {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    margin: 2px 0 2px 0;
+    text-align: center;
+}
+
+.plus-logo {
+    width: 35px;
+    float: left;
+}
+
+.yesEraseChazaButton {
+    display: block;
+    float: left;
+    background-color: rgb(179, 32, 32);
+    width: 80px;
+    margin: 0 8px 0 7px;
+    border: none;
+    border-radius: 8px;
+}
+
+.notEraseChazaButton {
+    background-color: rgb(29, 123, 146);
+    width: 80px;
+}
+
+.tagForForm1 {
+    color: black;
+    font-weight: bold;
+    width: 100%;
+}
+
+.form-control {
+    position: sticky;
+    width: 265px;
+    font-size: 20px;
+    height: 35px;
+    border: none;
+    margin-left: 48px;
+    margin-top: -91px;
+}
+
+.form-control1 {
+    position: sticky;
+    width: 250px;
+    font-size: 20px;
+    height: 35px;
+    border: none;
+    margin-left: 56px;
+    margin-top: -40px;
+}
+
+.form-control2 {
+    position: sticky;
+    width: 250px;
+    font-size: 20px;
+    height: 35px;
+    border: none;
+    margin-left: 56px;
+    margin-top: -15px;
+}
+
+.form-control3 {
+    position: sticky;
+    width: 630px;
+    font-size: 20px;
+    height: 100px;
+    border: none;
+    margin-left: 0px;
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-control4 {
+    position: sticky;
+    width: 308px;
+    font-size: 18px;
+    height: 130px;
+    border: none;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-control5 {
+    position: sticky;
+    width: 50px;
+    font-size: 20px;
+    height: 35px;
+    border: none;
+    margin-left: 59px;
+    margin-top: -24px;
+    margin-bottom: -28px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.mainPage-Link {
+    text-align: left;
+}
+
+.registerButton {
+    border-radius: 5px;
+    background-color: rgb(238, 100, 100);
+    border-style: none;
+    padding: 10px 5px 10px 5px;
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+.registerButton2 {
+    border-radius: 5px;
+    background-color: #17A597;
+    border-style: none;
+    padding: 10px 5px 10px 5px;
+    width: 250px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+.registerButton3 {
+    border-radius: 5px;
+    background-color: rgb(10, 123, 131);
+    border-style: none;
+    padding: 10px 5px 10px 5px;
+    width: 130px;
+    margin-top: 25px;
+    margin-left: 94px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+.registerButton4 {
+    border-radius: 5px;
+    background-color: rgb(173, 11, 46);
+    border-style: none;
+    padding: 10px 5px 10px 5px;
+    width: 210px;
+    margin-top: 8px;
+    margin-left: 55px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+.registerButton5 {
+    display:block;
+    border-radius: 5px;
+    background-color: #17A597;
+    border-style: none;
+    padding: 10px 5px 10px 5px;
+    width: 230px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.usernameInput {
+    width: 240px;
+    height: 30px;
+    font-size: 20px;
+    align-self: left;
+}
+
+.header-Box {
+    display: block;
+    width: 900px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.title-Box {
+    display: block;
+    float: left;
+    background-color: rgba(5, 22, 30, 0.6);
+    border-radius: 10px;
+    width: 780px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Chazam-logo2 {
+    position: relative;
+    bottom: 4px;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+
+.mainPage-title {
+    color: #40cfc0;
+    font-size: 43px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.mainPage-subtitle {
+    color: white;
+    font-size: 18px;
+    margin-top: -6px;
+    margin-bottom: 0px;
+}
+
+.user-Box {
+    display: block;
+    float: right;
+    background-color: rgba(5, 22, 30, 0.6);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user-icon {
+    width: 60px;
+    margin: 20px 20px 20px 20px;
+}
+
+.mainPage-Icon {
+    width: 120px;
+    margin-top: 130px;
+    margin-bottom: 40px;
+}
+
+.mainPage-ButtonTitle {
+    color: white;
+    font-size: 20px;
+}
+
+.function-Container {
+    display: block;
+    width: 900px;
+    height: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.catalogo-Button {
+    display: block;
+    text-align: center;
+    float: left;
+    background-color: rgba(173, 71, 71, 0.8);
+    border-radius: 10px;
+    margin-right: 15px;
+    width: 290px;
+    height: 480px;
+}
+
+.mapa-Button {
+    display: block;
+    text-align: center;
+    float: left;
+    background-color: rgba(23, 165, 151, 0.8);
+    border-radius: 10px;
+    margin-right: 15px;
+    width: 290px;
+    height: 480px;
+}
+
+.ranking-Button {
+    display: block;
+    text-align: center;
+    float: left;
+    background-color: rgba(14, 98, 90, 0.8);
+    border-radius: 10px;
+    width: 290px;
+    height: 480px;
+}
+
+footer {
+    margin-top: 15px;
+    height: 75px;
+    padding: 10px 0 10px 0;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+}
+
+.footer-Content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+}
+
+#popup-content {
+    visibility: hidden;
+    padding: 0px;
+    margin-top:20px;
+    margin-right: 0px;
+    background-color: rgba(116, 28, 28, 0);
+    width: 400px;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    right: 4px;
+}
+
+.leftFilter {
+    float: left;
+    background-color:rgba(255, 255, 255, 0); 
+    width: 160px;
+    text-align: left;
+    margin-right: 20px;
+    font-size: 17px;
+}
+
+.ubicacionesFilterContainer{
+    border-radius:5px;
+    background-color: rgba(6, 55, 54, 0.767);
+    padding: 15px 10px 15px 10px;
+    margin-bottom:10px;
+}
+
+.filterTitle{
+    font-weight: bold;
+    margin: 5px 0 5px 5px;
+}
+
+.containerDivCool{
+    overflow:auto; 
+    background-color: rgba(0, 0, 0, 0);
+    text-align: right;
+    padding: 0px 0px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:0px;
+    width: 1160px;
+    font-size: 20px;
+    color: white;
+}
+
+.containerDivCool2{
+    position:relative;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0px 0px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:0px;
+    width: 840px;
+    color: white;
+    min-height: 480px;
+}
+
+.mapa-Tag {
+    position:absolute;
+    text-align: center;
+    background-color: #125c53;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    width: 100px;
+    margin: 0 0 0 0;
+    color: white;
+    z-index:100;
+}
+
+#mapa-Box {
+    float: right;
+    margin-right:20px;
+    width: 950px;
+    height:950px;
+    color: white;
+    background-image: url('Pictures/mapa.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mapa-Box2 {
+    width: 950px;
+    margin-right:auto;
+    margin-left:auto;
+    height:950px;
+    background-image: url('Pictures/mapa.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.selectLocation-text{
+    display:block;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width:800px;
+    margin-left:auto;
+    margin-right:auto;
+    height:45px;
+    font-size: 30px;
+    font-weight:400;
+    text-align:center;
+    margin-bottom:0px;
+    padding-top:20px;
+    padding-bottom:5px;
+    color: white;
+    background-color: #0E625A;
+}
+
+#location-Pin{
+    width:50px;
+}
+
+.location-Pin2{
+    position:absolute;
+    width: 50px;
+    height:50px;
+    margin: 0 0 0 0;
+    background-image: url('Pictures/locationPin2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.containerranking{
+    position:relative;
+    overflow:auto;
+    background-color: rgba(7, 51, 47, 0.75);
+    border-radius:20px;
+    padding: 5px 50px 50px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+    min-height: 380px;
+    text-align: center;
+}
+
+.leftRanking {
+    overflow:auto;
+    float: left;
+    background-color:rgba(255, 255, 255, 0); 
+    width: 160px;
+    text-align: left;
+    margin-right: 20px;
+    font-size: 17px;
+}
+
+.containerDivCool3{
+    overflow:auto;  
+    float:right; 
+    background-color: rgba(0, 255, 13, 0);
+    text-align: center;
+    width:500px;
+    padding: 0px 0px 0px 0px;
+    margin-top:120px;
+    margin-right: 30px;
+    font-size: 20px;
+    color: white;
+}
+
+.containerDivCool4{
+    overflow:auto;  
+    float:right; 
+    background-color: rgba(0, 255, 13, 0);
+    text-align: right;
+    width:500px;
+    padding: 0px 0px 0px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:0px;
+    font-size: 20px;
+    color: white;
+}
+
+.buttonRanking {
+    border: none;
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0px 0px 7px 5px;
+    width: 130px;
+    border-radius:5px;
+    padding: 8px 0px 8px 0px;
+    color: #0E625A;
+    background-color: rgba(248, 248, 248, 0.979);
+}
+
+.tituloRanking {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    margin-top: 45px;
+    margin-bottom:30px;
+}
+
+table{
+    width: 410px;
+}
+
+th{
+    color:white;
+    background-color: rgb(16, 126, 115);
+    padding: 10px 0px 10px 0px;
+    width: 200px;
+}
+
+td{
+    color: white;
+    padding: 15px 0px 15px 0px;
+    text-align: center;
+    width: 200px;
+}
+
+tr{
+    width: 200px;
+}

@@ -1,0 +1,65 @@
+<DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chazam | Mapa</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'Pictures/chazamIcon.ico' %}" />
+    <!--Pone el ícono de la página en el navegador-->
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <!--LLama la hoja de estilos de CSS-->
+  </head>
+
+  <body>
+    {% load socialaccount %} {% providers_media_js %} {% load i18n %}
+   <main>
+    <div class="header-Box">
+      <div class="title-Box">
+        <a class="mainPage-Link" href="/">
+          <img src="{% static 'Pictures/chazamLogo2.png' %}" class="Chazam-logo2" alt="Chazam logo" />
+          <p class="mainPage-title">Chazam</p>
+        </a>
+        <p class="mainPage-subtitle">Sistema de información de chazas
+          en la Universidad Nacional de Colombia</p>
+      </div>
+      <div class="user-Box" onclick="showPopUp('logOutBox1')">
+        <img src="{% static 'Pictures/userIcon.png' %}" class="user-icon" alt="user Icon" />
+      </div>
+      <div class="logout-Box" id="logOutBox1">
+        {% if user_is_owner %}
+        <a href="/uploadChazaInfo/">
+          <p class="logout-Text">Cargar/editar chaza</p>
+        </a>
+        {% endif %}
+        <a href="/accounts/logout/">
+          <p class="logout-Text">Cerrar sesión</p>
+        </a>
+      </div>
+    </div>
+    <p class = "selectLocation-text">Seleccione la ubicación de su chaza en el mapa</p>
+
+    <div id = "mapa-Box2">
+      <img src="{% static 'Pictures/locationPin.png' %}" id = "location-Pin" />
+      <script type="text/javascript"> 
+        var corX = "{{chaza.CoordenadaX}}";
+        var corY = "{{chaza.CoordenadaY}}";
+        var elem = document.getElementById("location-Pin");
+        elem.style.marginLeft = corX;
+        elem.style.marginTop = corY;
+      </script>
+    </div> 
+    <button class = "registerButton5" onclick = "getCoordinates()">
+      Guardar Ubicación
+    </button>
+  </main>
+    <footer>
+      <div class = "footer-Content">
+        <p class = "footer-Text">Desarrollado por</p>
+        <img src="{% static 'Pictures/milhojasLogo.png' %}" class="Milhojas-logo" alt="Milhojas logo" />
+      </div>
+    </footer>
+  </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="{% static 'script.js' %}" type="text/javascript"></script><!--LLama el archivo de JavaScript-->
+  </html>

@@ -1,0 +1,29 @@
+<DOCTYPE html> 
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <title>Chazam | Reseña Chazas</title>
+        {% load static %} 
+        <link rel="icon" href="{% static 'Pictures/chazamIcon.ico' %}" /><!--Pone el ícono de la página en el navegador-->
+        <link href="{% static 'styles.css' %}" rel="stylesheet"><!--LLama la hoja de estilos de CSS-->
+        
+    </head>
+    
+    <body>      
+        {% load socialaccount %} {% providers_media_js %} {% load i18n %}
+      <main>
+        <div class="signup-Box">
+          <img src="{% static 'Pictures/chazamLogo.png' %}"class="Chazam-logo" alt="Chazam logo">
+          <p class = "finishRegister-Text">Reseña una chaza</p>
+          
+        </div>
+      </main>
+        <footer>
+          <div class = "footer-Content">
+            <p class = "footer-Text">Desarrollado por</p>
+            <img src="{% static 'Pictures/milhojasLogo.png' %}" class="Milhojas-logo" alt="Milhojas logo" />
+          </div>
+        </footer>
+    </body>
+    </html>

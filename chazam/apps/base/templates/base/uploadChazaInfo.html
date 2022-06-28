@@ -1,0 +1,87 @@
+<DOCTYPE html> 
+  <html lang="en">
+  
+  <head>
+      <meta charset="UTF-8" />
+      <title>Chazam | Carga Info Chaza</title>
+      {% load static %} 
+      <link rel="icon" href="{% static 'Pictures/chazamIcon.ico' %}" /><!--Pone el ícono de la página en el navegador-->
+      <link href="{% static 'styles.css' %}" rel="stylesheet"><!--LLama la hoja de estilos de CSS-->
+      <script src="{% static 'script.js' %}"></script>
+    </head>
+  
+  <body> 
+  <main>
+    <div class="header-Box">
+      <div class ="title-Box">
+        <a class = "mainPage-Link" href="/">
+          <img src="{% static 'Pictures/chazamLogo2.png' %}" class="Chazam-logo2" alt="Chazam logo" />
+          <p class = "mainPage-title">Chazam</p>
+        </a>
+        <p class = "mainPage-subtitle">Sistema de información de chazas
+          en la Universidad Nacional de Colombia</p>
+      </div>
+      <div class = "user-Box" onclick= "showPopUp('logOutBox')">
+        <img src="{% static 'Pictures/userIcon.png' %}" class="user-icon" alt="user Icon" />
+      </div>
+      <div class= "logout-Box" id = "logOutBox">
+        <a href="/uploadChazaInfo/">
+          <p class ="logout-Text">Cargar/editar chaza</p>
+        </a>
+        <a href="/accounts/logout/">
+          <p class ="logout-Text">Cerrar sesión</p>
+        </a>
+      </div>
+    </div>     
+    <div class="registerChaza-Box">
+      <a class = "goBackButton" href="{{request.META.HTTP_REFERER}}">
+        <p class = "goBack-Text">Volver al inicio</p>
+      </a>
+      <p class = "registerChaza-Text">Registrar información Chaza</p>
+      <form method="POST" action="">
+        {% csrf_token %}
+        <div class = "signup-Box3">
+          <p class = "tagForForm1">Nombre:</p>
+          <p class = "tagForForm1">Ubicación:</p>
+          <p class = "tagForForm1">Categoria:</p>
+          <p class = "tagForForm1">Descripción:</p>
+          <div class = "form-control">
+            {{ form.NombreChaza }}
+          </div>
+          <div class = "form-control1">
+            {{ form.IdUbicacion }}
+          </div>
+          <div class = "form-control2">
+            {{ form.IdCategoria }}
+          </div>
+          <div class = "form-control3">
+            {{ form.Descripcion }}
+          </div>
+        </div>
+        <input type = "submit" class = "registerButton2" value ="Guardar información">
+      </form>
+
+      {% if user_has_chaza %}
+      <button class = "eraseChazaButton" onclick = "showPopUp('confirmChazaDeletion')">
+        <p class = "erase-Text">Borrar chaza</p>
+      </button>
+      {% endif %}
+      <div class ="confirmChazaDeletion-Box" id = "confirmChazaDeletion">
+        <p class = "erase-Text">¿Borrar tu chaza?</p>
+        <a class = "yesEraseChazaButton" href = "/eraseChaza/">
+          <p class = "erase-Text">Si</p>
+        </a>
+        <button class = "notEraseChazaButton" onclick = "showPopUp('confirmChazaDeletion')">
+          <p class = "erase-Text">No</p>
+        </button>
+      </div>
+    </div>
+  </main>
+    <footer>
+      <div class = "footer-Content">
+        <p class = "footer-Text">Desarrollado por</p>
+        <img src="{% static 'Pictures/milhojasLogo.png' %}" class="Milhojas-logo" alt="Milhojas logo" />
+      </div>
+    </footer>
+  </body>
+  </html>

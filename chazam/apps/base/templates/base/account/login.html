@@ -1,0 +1,41 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+<div class="login-Box2">
+  <h1 class = "Ingresar-Text">Ingresar</h1>
+  {% get_providers as socialaccount_providers %}
+
+  {% if socialaccount_providers %}
+  <!---->
+  <a href="/accounts/google/login/">
+    <div class = "googleLogin">
+      {% load static %} 
+      <img src= "{% static 'Pictures/googleLogo.png' %}" class="Google-logo" alt="Google logo">
+      <p class = "login-Text">Ingresar con Google</p>
+    </div>
+  </a>
+  <div class="login-or">O ingresa con tu cuenta existente</div>
+
+  {% include "socialaccount/snippets/login_extra.html" %}
+  {% endif %}
+
+  <form class="login" method="POST" action="{% url 'account_login' %}">
+    <div class = "otherLogin">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    </div>
+    <button class = "ingresarButton" type="submit"><p class = "login-Text">Ingresar</p></button>
+  </form>
+  <div class = "goToRegisterButton"><a href="{% url 'account_signup' %}">Registrarse</a></div>  
+</div>
+
+{% endblock %}

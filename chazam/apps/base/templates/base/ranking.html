@@ -1,0 +1,97 @@
+<DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chazam | Ranking</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'Pictures/chazamIcon.ico' %}" />
+    <!--Pone el ícono de la página en el navegador-->
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <!--LLama la hoja de estilos de CSS-->
+    <script src="{% static 'script.js' %}"></script>
+    <!--LLama el archivo de JavaScript-->
+  </head>
+
+  <body>
+    {% load socialaccount %} {% providers_media_js %} {% load i18n %}
+    <main>
+      <div class="header-Box">
+        <div class="title-Box">
+          <a class="mainPage-Link" href="/">
+            <img src="{% static 'Pictures/chazamLogo2.png' %}" class="Chazam-logo2" alt="Chazam logo" />
+            <p class="mainPage-title">Chazam</p>
+          </a>
+          <p class="mainPage-subtitle">Sistema de información de chazas
+            en la Universidad Nacional de Colombia</p>
+        </div>
+        <div class="user-Box" onclick="showPopUp('logOutBox1')">
+          <img src="{% static 'Pictures/userIcon.png' %}" class="user-icon" alt="user Icon" />
+        </div>
+        <div class="logout-Box" id="logOutBox1">
+          {% if user_is_owner %}
+          <a href="/uploadChazaInfo/">
+            <p class="logout-Text">Cargar/editar chaza</p>
+          </a>
+          {% endif %}
+          <a href="/accounts/logout/">
+            <p class="logout-Text">Cerrar sesión</p>
+          </a>
+        </div>
+      </div>
+      <!-- Aqui inicia el ranking-->
+      <div class="containerranking">
+        <p class="tituloRanking">Ranking Chazas</p>
+        <form method="GET" action="">
+
+          {% csrf_token %}
+          <div class="leftRanking">
+
+            {% for categoria in categorias %}
+
+            <button onclick = 'changeColor("{{ categoria.NombreCategoria}}")'  type="submit" class="buttonRanking" id = "{{ categoria.NombreCategoria}}" name="CategoriasRanking" value="{{categoria.IdCategoria}}">
+              {{ categoria.NombreCategoria}}
+            </button>
+            {% endfor %}
+          </div>
+
+          {% if not chazas %}
+          <div class="containerDivCool3">
+            No se encuentran chazas registradas en la categoria
+          </div>
+          {% else %}
+          <div class="containerDivCool4">
+            <table>
+              <tr>
+                <th scope="col1">Chaza</th>
+                <th scope="col2">Puntuación</th>
+              </tr>
+              {% for chaza in chazas %}
+
+              <tr>
+                <a href="../chaza/{{chaza.slug}}">
+                  <td data-title="Chaza">
+                    <a href="../chaza/{{chaza.slug}}">
+                      {{chaza.NombreChaza}}
+                    </a>  
+                  </td>
+                  <td data-title="Puntuación">{{chaza.Puntuacion}}</td>         
+              </tr>
+
+              {% endfor %}
+            </table>
+          </div>
+          {% endif %}
+        </form>
+      </div>
+      <!-- Aqui finaliza el ranking-->
+    </main>
+    <footer>
+      <div class="footer-Content">
+        <p class="footer-Text">Desarrollado por</p>
+        <img src="{% static 'Pictures/milhojasLogo.png' %}" class="Milhojas-logo" alt="Milhojas logo" />
+      </div>
+    </footer>
+  </body>
+
+  </html>

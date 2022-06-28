@@ -1,0 +1,27 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+
+{% block content %}
+<div class="logout-Page-Box">
+  <a class = "goBackButton2" href="{{request.META.HTTP_REFERER}}">
+    <p class = "goBack-Text">Volver</p>
+  </a>
+  <h1>Cerrar Sesión</h1>
+  <p>¿Estas seguro que deseas cerrar sesión?</p>
+
+  <form method="post" action="{% url 'account_logout' %}">
+    {% csrf_token %}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+    {% endif %}
+    <button class = "registerButton" type="submit">
+      <p class = "login-Text">Salir</p>
+    </button>
+  </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,110 @@
+<DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chazam | Mapa</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'Pictures/chazamIcon.ico' %}" />
+    <!--Pone el ícono de la página en el navegador-->
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <!--LLama la hoja de estilos de CSS-->
+  </head>
+
+  <body>
+    {% load socialaccount %} {% providers_media_js %} {% load i18n %}
+   <main>
+    <div class="header-Box">
+      <div class="title-Box">
+        <a class="mainPage-Link" href="/">
+          <img src="{% static 'Pictures/chazamLogo2.png' %}" class="Chazam-logo2" alt="Chazam logo" />
+          <p class="mainPage-title">Chazam</p>
+        </a>
+        <p class="mainPage-subtitle">Sistema de información de chazas
+          en la Universidad Nacional de Colombia</p>
+      </div>
+      <div class="user-Box" onclick="showPopUp('logOutBox1')">
+        <img src="{% static 'Pictures/userIcon.png' %}" class="user-icon" alt="user Icon" />
+      </div>
+      <div class="logout-Box" id="logOutBox1">
+        {% if user_is_owner %}
+        <a href="/uploadChazaInfo/">
+          <p class="logout-Text">Cargar/editar chaza</p>
+        </a>
+        {% endif %}
+        <a href="/accounts/logout/">
+          <p class="logout-Text">Cerrar sesión</p>
+        </a>
+      </div>
+    </div>
+
+    <form method="GET" action="">
+      {% csrf_token %}
+      <div class = "containerForSearchField">
+        <div class="filtro-Box2">
+          <div class="searchField">
+          {{filtro.form.my_lookup_field}}
+          </div>
+        </div>
+        <input type="image" class="filtroButton" src="{% static 'Pictures/catalogoLogo.png' %}">
+      </div>
+      <div class="containerDivCool">
+        <div class="leftFilter">
+          <div class="ubicacionesFilterContainer">
+            <p class = "filterTitle">{{filtro.form.Ubicaciones.label_tag}}</p>
+            {{filtro.form.Ubicaciones}}
+          </div>
+          <div class="ubicacionesFilterContainer">
+            <p class = "filterTitle">{{filtro.form.Categorias.label_tag}}</p>
+            {{filtro.form.Categorias}}
+          </div>
+          <div class="ubicacionesFilterContainer">
+            <p class = "filterTitle">{{filtro.form.Puntuaciones.label_tag}}</p>
+            {{filtro.form.Puntuaciones}}
+          </div>
+        </div>
+
+        <div id = "mapa-Box">
+          {% for chaza in chazas %}
+          <a href = "../chaza/{{chaza.slug}}">
+            <div class ="location-Pin2" id = {{chaza.slug}}pin 
+            onmouseover = "showPopUp('{{chaza.slug}}')"
+            onmouseout = "showPopUp('{{chaza.slug}}')">
+            </div>
+          </a>
+          <div class="mapa-Tag" id = {{chaza.slug}}>
+            <p class = "chazaTitle2">{{chaza.NombreChaza}}</p>
+            <p class = "chazaCategoria">{{ chaza.getCategoryName }}</p>
+          </div>
+          <script type="text/javascript"> 
+            var name = "{{chaza.slug}}";
+            var pinName = name + "pin"
+            var corX = "{{chaza.CoordenadaX}}";
+            var corY = "{{chaza.CoordenadaY}}";
+            var pin = document.getElementById(pinName); 
+            pin.style.marginLeft = corX;
+            pin.style.marginTop = corY; 
+            var elem = document.getElementById(name);
+            corX = corX.slice(0, corX.length -2)
+            temp = parseInt(corX)
+            temp += 40
+            corX = temp.toString() + "px"
+            elem.style.marginLeft = corX;
+            elem.style.marginTop = corY;
+            elem.style.visibility = "hidden";         
+          </script>
+          {% endfor %}
+        </div> 
+      </div>
+    </form> 
+  
+  </main>
+    <footer>
+      <div class = "footer-Content">
+        <p class = "footer-Text">Desarrollado por</p>
+        <img src="{% static 'Pictures/milhojasLogo.png' %}" class="Milhojas-logo" alt="Milhojas logo" />
+      </div>
+    </footer>
+  </body>
+  <script src="{% static 'script.js' %}"></script><!--LLama el archivo de JavaScript-->
+  </html>
