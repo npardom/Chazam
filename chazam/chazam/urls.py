@@ -25,6 +25,7 @@ urlpatterns = [
     path('updateCoordinates/', views.updateCoordinates),
     path('finalSignup/', views.finalSignup),
     path('uploadChazaInfo/', views.uploadChazaInfo),
+    path('admin/clearcache/', include('clearcache.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('formComensales/',views.form_comensales),
